@@ -10,12 +10,19 @@ class App extends React.Component {
     };
   }
 
+  testFunctionToBind() {
+    alert("Binded");
+  }
+
   render() {
     return (
       <div>
         <h1>Hello Folks!</h1>
         <h3>Below contents are from SubApps!</h3>
-        <SubApp1 AppState={this.state} />
+        <SubApp1
+          AppState={this.state}
+          testFunctionToBind={this.testFunctionToBind.bind(this)}
+        />
       </div>
     );
   }

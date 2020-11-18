@@ -6,6 +6,7 @@ class SubApp1 extends React.Component {
   }
 
   render() {
+    this.props.testFunctionToBind();
     return (
       <div>
         <h1>From SubApp1</h1>
